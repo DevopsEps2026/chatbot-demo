@@ -1,21 +1,22 @@
 def chatbot(message):
     message = message.lower()
 
-    if "hello" in message:
+    if message == "hello":
         return "Hi Amarnath!"
-    elif "how are you" in message:
+    elif message == "how are you":
         return "I am fine."
-    elif "bye" in message:
+    elif message == "bye":
         return "Good Bye!"
     else:
-        return "Sorry, I don't understand."
+        return "I don't understand."
 
 
-while True:
-    user_input = input("You: ")
+if __name__ == "__main__":
+    while True:
+        user_input = input("You: ")
 
-    if user_input.lower() == "exit":
-        print("Bot: Goodbye!")
-        break
+        if user_input.lower() == "exit":
+            print("Bot: Goodbye!")
+            break
 
-    print("Bot:", chatbot(user_input))
+        print("Bot:", chatbot(user_input))
